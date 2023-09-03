@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Projects</title>
+</head>
+<style>
+	p {
+    	white-space: pre;
+    	color: black;
+    }
+</style>
+<body>
+	<h1>Minesweeper Solver</h1>
+	<p>The goal is to solve the original classic minesweeper (use Minesweeper Arbiter here) with highest win rate.</p>
+	
+	<video width="640" height="360" controls>
+        <source src="../Archived Projects/minesweeper/minesweeper.mp4" type="video/mp4">
+    </video>
+	
+	<p>This solver uses matrix to analysis all unsolved cells. </p>
+	<p>It uses linear least square (scipy.optimize.lsq_linear) to find the probability of each unsoved cell. </p>
+	<p>So that if a guess is required, the solver can click the cell with lowest probability. </p>
+	<p>Current win rate is around 23%. If ignore the situation failing before any open cells, win rate is around 27%.</p>
+	
+	<h2>Probability can be improved</h2>
+	<p>1. This solver clicks cells in the corners first. It is not guaranteed the best start.</p>
+	<p>2. If need to guess, the solver will click the one with lowest probability to have a mine. </p>
+	<p>    This is not guaranteed best choice because two 50% guess is worse than one 33% guess. </p>
+	
+	<h2>Reference</h2>
+	<a href="../Archived Projects/minesweeper/sweeper.py" target="_blank">Source Code</a><br />
+	<a href="../Archived Projects/minesweeper/Capture.PNG" target="_blank">Capture.PNG in Source Code</a>
+	
+	
+</body>
+</html>
