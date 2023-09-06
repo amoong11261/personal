@@ -7,12 +7,15 @@
 </head>
 <body>
     <h1>Mahjong AI</h1>
-	<h2>Intuition</h2>
+<h2>Intuition</h2>
     <p>Assuming we have a database, it contains many nodes on paths from different environments to "success". </p>
 	<p>Then conduct a query of the current environment to find similar environments in the database.</p>
 	<p>There is a higher chance of finding environments that are closer to "success" because the number of "success" environments is much smaller than random environment.</p>
 	<p>Like a decision tree, there are fewer nodes at the lower level. </p>
 	<p>By removing old data and adding new "success" data, the database should converge to the "ideal" database.</p>
 	<p>Monte Carlo tree needs cutting "fail" leaves, and this process is like adding "success" leaves, so that randomness will not destroy the tree.</p>
+<h2>Update</h2>
+	<p>Importing 1M hand tiles, basic CNN can get 50% top choice = humanc choice, 20% second choice = human choice, 10% third choice = human choice.</p>
+	<p>Considering human reaction in "defense mode" is not predictable by  hand tiles, it seems to be a good start.</p>
 </body>
 </html>
