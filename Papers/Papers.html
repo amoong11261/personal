@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Local PDF Papers</title>
+  <title>Local PDF Papers / 本地PDF论文</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,20 +13,62 @@
       padding: 0;
     }
     .pdf-list li {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
-    .pdf-embed {
-      margin-top: 30px;
+    .pdf-intro, .pdf-intro-ch,
+    .pdf-date, .pdf-date-ch {
+      font-size: 14px;
+      color: #555;
+      margin: 5px 0 0 20px;
     }
   </style>
 </head>
 <body>
-  <h1>Perosnal Papers, course final projects, unpublished</h1>
+  <h1>
+    Personal Papers, Course Final Projects, Unpublished<br>
+    (个人论文，课程期末项目，未发表)
+  </h1>
+  <p>(the later the better / 越新的越好)</p>
   <ul class="pdf-list">
-    <li><a href="paper1.pdf" target="_blank">Paper 1</a></li>
-    <li><a href="paper2.pdf" target="_blank">Paper 2</a></li>
-    <li><a href="Fair_Face_Recognition.pdf" target="_blank">Fair Face Recognition</a></li>
+    <li>
+      <a href="Text_to_Image_generation_In_DCGAN_and_Stable_Diffusion_Model - Zhou, Naka, Zhu.pdf" target="_blank">
+        Text to Image Generation In DCGAN and Stable Diffusion Model
+      </a>
+      <p class="pdf-date">Date: June, 2023</p>
+      <p class="pdf-date-ch">日期：2023年6月</p>
+      <p class="pdf-intro">
+        This paper implements a stable diffusion model for text-to-image generation. It leverages a U-Net architecture enhanced with cross-attention layers to incorporate text embeddings from the CLIP ViT-B/32 model. Evaluated on the MNIST dataset using digit strings as input, the approach emphasizes time efficiency while highlighting a trade-off in image quality compared to a DCGAN-based method.
+      </p>
+      <p class="pdf-intro-ch">
+        本文实现了一个用于文本到图像生成的稳定扩散模型。该模型利用一个经过交叉注意力层增强的 U-Net 架构，将 CLIP ViT-B/32 模型生成的文本嵌入融合进来。在 MNIST 数据集上以数字字符串作为输入进行评估，该方法强调了时间效率，同时展现了与基于 DCGAN 方法相比在图像质量方面的权衡。
+      </p>
+    </li>
+    <li>
+      <a href="Video Frame Prediction with ViViT and U-Net.pdf" target="_blank">
+        Video Frame Prediction with ViViT and U-Net
+      </a>
+      <p class="pdf-date">Date: June, 2024</p>
+      <p class="pdf-date-ch">日期：2024年6月</p>
+      <p class="pdf-intro">
+        This paper presents a solution for a deep learning competition focused on video frame prediction and semantic segmentation. The model is composed of three parts: a JEPA encoder, a predictor, and a semantic decoder. The U-Net architecture is employed to enhance the semantic decoder, as its predictions on abundant unlabeled data are used as input for the JEPA encoder, thereby improving feature extraction and overall performance. The dataset provided includes many unlabeled videos along with some labeled samples, offering a rich ground for self-supervised and semi-supervised learning. If we were to tackle this challenge again, we would explore using V-JEPA to further enhance performance and efficiency.
+      </p>
+      <p class="pdf-intro-ch">
+        本文提出了一种针对深度学习竞赛的视频帧预测和语义分割问题的解决方案。该模型由三个部分组成：JEPA 编码器、预测器和语义解码器。我们采用 U-Net 架构来增强语义解码器，因为其在大量未标注数据上的预测结果被用作 JEPA 编码器的输入，从而提高了特征提取和整体模型性能。竞赛数据集提供了大量未标注的视频以及一些标注样本，为自监督和半监督学习提供了丰富的资源。如果再次面对这一挑战，我们将探索采用 V-JEPA 以进一步提升性能和效率。
+      </p>
+    </li>
+    <li>
+      <a href="Fair_Face_Recognition.pdf" target="_blank">
+        Fair Face Recognition
+      </a>
+      <p class="pdf-date">Date: December 2024</p>
+      <p class="pdf-date-ch">日期：2024年12月</p>
+      <p class="pdf-intro">
+        This paper tackles fairness issues in face recognition by exploring innovative self-supervised learning techniques. A key contribution is the introduction of a dynamic masking method within a Masked Autoencoder framework—referred to as the sensitivity-awareness masking method. This approach dynamically adjusts the masking strategy by analyzing attention heatmaps to identify and prioritize sensitive regions in face images. By doing so, the model learns to either focus on or de-emphasize these regions, effectively mitigating biases related to age, gender, and race.
+      </p>
+      <p class="pdf-intro-ch">
+        本文通过探索创新的自监督学习技术来解决人脸识别中的公平性问题。其一项关键贡献是引入了一种基于 Masked Autoencoder 框架的动态遮罩方法，即敏感性自适应遮罩方法。该方法通过分析注意力热图，动态调整遮罩策略，从而识别并优先处理人脸图像中的敏感区域。通过这种方式，模型学会聚焦或淡化这些区域，有效地缓解了与年龄、性别和种族相关的偏差。
+      </p>
+    </li>
   </ul>
-  
 </body>
 </html>

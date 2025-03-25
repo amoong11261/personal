@@ -3,36 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minesweeper</title>
+    <title>Minesweeper / 扫雷求解器</title>
+    <style>
+        p {
+            white-space: pre;
+            color: black;
+            line-height: 1.2;
+            margin: 5px 0;
+        }
+    </style>
 </head>
-<style>
-	p {
-    	white-space: pre;
-    	color: black;
-    }
-</style>
 <body>
-	<h1>Minesweeper Solver</h1>
-	<p>The goal is to solve the original classic minesweeper (use Minesweeper Arbiter here) with highest win rate.</p>
-	
-	<video width="640" height="360" controls>
+    <h1>Minesweeper Solver / 扫雷求解器</h1>
+    
+    <p>
+        The goal is to solve the original classic minesweeper (use Minesweeper Arbiter here) with highest win rate.
+        目标是以最高胜率解决原版经典扫雷游戏（此处使用 Minesweeper Arbiter）。
+    </p>
+    
+    <video width="640" height="360" controls>
         <source src="../Archived Projects/minesweeper/minesweeper.mp4" type="video/mp4">
     </video>
-	
-	<p>This solver uses matrix to analysis all unsolved cells. </p>
-	<p>It uses linear least square (scipy.optimize.lsq_linear) to find the probability of each unsoved cell. </p>
-	<p>So that if a guess is required, the solver can click the cell with lowest probability. </p>
-	<p>Current win rate is around 23%. If ignore the situation failing before any open cells, win rate is around 27%.</p>
-	
-	<h2>Probability can be improved</h2>
-	<p>1. This solver clicks cells in the corners first. It is not guaranteed the best start.</p>
-	<p>2. If need to guess, the solver will click the one with lowest probability to have a mine. </p>
-	<p>    This is not guaranteed best choice because two 50% guess is worse than one 33% guess. </p>
-	
-	<h2>Reference</h2>
-	<a href="../Archived Projects/minesweeper/sweeper.txt" target="_blank">Source Code</a><br />
-	<a href="../Archived Projects/minesweeper/Capture.PNG" target="_blank">Capture.PNG in Source Code</a>
-	
-	
+    
+    <p>
+        This solver uses matrix to analysis all unsolved cells.
+        该求解器使用矩阵来分析所有未解的单元格。
+
+        It uses linear least square (scipy.optimize.lsq_linear) to find the probability of each unsolved cell.
+        它采用线性最小二乘法（scipy.optimize.lsq_linear）来计算每个未解单元格的雷的概率。
+
+        So that if a guess is required, the solver can click the cell with lowest probability.
+        因此，在需要猜测时，求解器会点击概率最低的单元格。
+
+        Current win rate is around 23%. If ignore the situation failing before any open cells, win rate is around 27%.
+        当前胜率约为23%。如果忽略在任何单元格打开前就失败的情况，胜率约为27%。
+    </p>
+    
+    <h2>Probability can be improved / 概率计算可进一步改进</h2>
+    
+    <p>
+        1. This solver clicks cells in the corners first.
+        1. 该求解器首先点击角落的单元格。
+
+        It is not guaranteed the best start.   
+        这不一定是最佳的起始选择。
+
+        2. If need to guess, the solver will click the one with lowest probability to have a mine.
+        2. 当需要猜测时，求解器会点击雷的概率最低的单元格。
+
+        This is not guaranteed best choice because two 50% guess is worse than one 33% guess. 
+        这不一定是最佳选择，因为两个50%的猜测不如一个33%的猜测。
+    </p>
+    
+    <h2>Reference / 参考</h2>
+    
+    <p>
+        <a href="../Archived Projects/minesweeper/sweeper.txt" target="_blank">Source Code / 源代码</a>
+        <a href="../Archived Projects/minesweeper/Capture.PNG" target="_blank">Capture.PNG in Source Code / 源代码中的截图 Capture.PNG</a>
+    </p>
 </body>
 </html>
